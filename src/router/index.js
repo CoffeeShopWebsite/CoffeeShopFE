@@ -13,11 +13,11 @@ import TestMain from '@/components/TestMain'
 import Account from '@/components/Account'
 import Product from '@/components/Product'
 import Order from '@/components/Order'
+import SignIn from '../components/authentication/sign-in/SignIn.vue'
 
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
   mode: 'history',
   routes: [
     {
@@ -54,12 +54,16 @@ export default new Router({
           component: Login
         },
         {
+          path: "sign-in",
+          name: "sign-in",
+          component: SignIn
+        },
+        {
           path: "forget-password",
           name: "forgetpassword",
           component: ForgetPassword
         }
       ]
     }
-  ] 
   ] 
 })
