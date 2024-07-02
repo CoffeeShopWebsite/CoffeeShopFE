@@ -96,9 +96,9 @@
 .details-sign-in label{
     position: absolute;
     margin-top: 10px;
-    left: 38%;
+    left: 42%;
     font-size: 20px;
-    color: #000;
+    color: #696969;
     pointer-events: none;
     transition: 0.15s all ease;
 }

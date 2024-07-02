@@ -3,17 +3,21 @@ import Router from 'vue-router'
 
 // authentication
 import Authentication from '@/components/authentication/Authentication'
-import Login from '@/components/authentication/login/Login'
-import ForgetPassword from '@/components/authentication/forget-password/ForgetPassword'
- 
+//
+  import Login from '@/components/authentication/authentication-content/Login'
+  import ForgetPassword from '@/components/authentication/authentication-content/ForgetPassword'
+  import SignIn from '@/components/authentication/authentication-content/SignIn'
+
 // admin
+import Admin from '@/components/admin-page/Admin'
+//
+  import Account from '@/components/admin-page/admin-content/Account'
+  import Product from '@/components/admin-page/admin-content/Product'
+  import Order from '@/components/admin-page/admin-content/Order'
+
+
+
 import TestMain from '@/components/TestMain'
-
-
-import Account from '@/components/Account'
-import Product from '@/components/Product'
-import Order from '@/components/Order'
-import SignIn from '../components/authentication/sign-in/SignIn.vue'
 
 Vue.use(Router)
 
@@ -25,21 +29,7 @@ export default new Router({
       name: 'testmain',
       component: TestMain,
     },
-    {
-      path: '/account',
-      name: 'account',
-      component: Account,
-    },
-    {
-      path: '/product',
-      name: 'product',
-      component: Product,
-    },
-    {
-      path: '/order',
-      name: 'order',
-      component: Order,
-    },
+    
     {
       path: '/authentication',
       name: 'authentication',
@@ -63,6 +53,28 @@ export default new Router({
           name: "forgetpassword",
           component: ForgetPassword
         }
+      ]
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: Admin,
+      children: [
+        {
+          path: 'account',
+          name: 'account',
+          component: Account,
+        },
+        {
+          path: 'product',
+          name: 'product',
+          component: Product,
+        },
+        {
+          path: 'order',
+          name: 'order',
+          component: Order,
+        },
       ]
     }
   ] 
