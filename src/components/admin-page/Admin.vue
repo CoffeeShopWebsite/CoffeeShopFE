@@ -1,140 +1,175 @@
 <template>
-    <div class="body">
-        <div class="header-bar">
-            <div class="header-selection">
-                <div class="admin-selection">
-                    <a class="admin" href="/admin">ADMIN</a>
-                </div>
-                <div class="log-out">
-                    <div>Đăng xuất</div>    
-                </div>      
-            </div>
-            <nav class="nav-selection">
-                <p>- MENU -</p>
-                <div class="inside-nav-selection">
-                    <a href="/admin/account">Tài khoản</a>
-                    <a href="/admin/product">Sản phẩm</a>
-                    <a href="/admin/order">Đơn hàng</a>
-                </div>
-                <p>- TÍNH NĂNG -</p>
-            </nav>
-        </div>
-        <div class="boder">
-            
-        </div>
-        <div class="footer" ></div>
+    <div class="flex flex-col h-screen bg-background">
+        <Sidebar />
+        <MainContent />
     </div>
 </template>
 
 <script>
+import Sidebar from './admin-builder/Sidebar.vue';
+import MainContent from './admin-builder/MainContent.vue';
+
 export default {
     name: 'Admin',
+    components: { Sidebar, MainContent }
 }
 </script>
-
-<style>
-.body{
-    margin: 0 0 30px 0; 
-}
-/*-----------------------------------*/
-.header-bar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-        background-color: #363636;
-        color: #fff;
-        font-size: 25px;
-        width: 100%;
-        transition: top 0.3s ease;
-}
-.header-selection {
+<style> /* all css of main admin page are here */
+    .flex{
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        height: 70px;
-        gap: 100rem;
-}
-.admin-selection{
-    display: flex;
-    gap: 50px;
-}
-.admin-selection a{
-        color: #fff;
-        text-decoration: none;
-        font-size: 30px;
-        font-weight: 100;
-}
-.nav-selection{
-    display: flex;
-    flex-direction: column;
-    background-color: #4b4b4b;
-    position: fixed;
-    width: 300px;
-    height: 100%;
-}
-.nav-selection p:first-child{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 20px 20px 20px
-}
-.nav-selection p{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 40px 20px 20px
-}
-.inside-nav-selection{
-        display: flex;
+    }
+    .flex-col{
         flex-direction: column;
-        gap: 30px;
-        margin-left: 50px
-}
-.inside-nav-selection a{
-        position: relative;
-        color: #fff;
-        text-decoration: none;
-        transition: color 0.5s ease;
-        width: fit-content;
-}
-.inside-nav-selection a::before{
-        content: "";
-        transition: width 0.3s ease;
-        background-color: #fff;
-        height: 2px;
-        width: 0;
-        position: absolute;
-        bottom: 0;
-}
-.inside-nav-selection a:hover::before{
-    width: 100%;
-}
-.admin{
-    transition: transform 0.5s ease;
-}
-.admin:hover{
-    transform: scale(1.1);
-}
-.log-out{
-    cursor: pointer;
-}
-/*-----------------------------------*/
-.boder{
-    background-color: #d3d3d3;
-    width: 100%;
-    margin: 70px 300px;
-}
-.test-size{
-    display: flex;
-    justify-content: center;
-}
-/*-----------------------------------*/
-.footer{
-        width: 100%;
-        height: 400px;
-        margin: 0;
-        background-color: #363636;
-        color: #fff;
-        display: none
-}
+    }
+    .h-screen{
+        height: 100vh;
+    }
+    .bg-background{
+        background-color: hsl(var(--background));
+    }
+    .w-1\/5{
+        width: 20%;
+        height: 100%;
+        position: fixed;
+    }
+    .bg-zinc-800{
+        --tw-bg-opacity: 1;
+        background-color: rgb(39 39 42 / var(--tw-bg-opacity))
+    } 
+    .text-white{
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity))
+    }
+    .p-4{
+        padding: 1rem;
+    }
+    .text-lg{
+        font-size: 1.125rem/* 18px */;
+        line-height: 1.75rem/* 28px */
+    } 
+    .font-bold{
+        font-weight: 700;
+    }
+    .mt-4{
+        margin-top: 1rem;
+    }
+    .block{
+        display: block;
+    } 
+    .py-2{
+        padding-top: 0.5rem/* 8px */;
+        padding-bottom: 0.5rem/* 8px */;
+    } 
+    .hover\:bg-zinc-700:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(63 63 70 / var(--tw-bg-opacity));
+    }
+    .flex-1 {
+        flex: 1 1 0%;
+        margin-left: 270px;
+    }
+    .justify-between {
+    justify-content: space-between;
+    }
+    .items-center {
+    align-items: center;
+    }
+    .p-6 {
+    padding: 1.5rem/* 24px */;
+    }
+    .mb-6 {
+    margin-bottom: 1.5rem/* 24px */;
+    }
+    .text-2xl {
+    font-size: 1.25rem/* 20px */;
+    line-height: 2rem/* 32px */;
+    }
+    .bg-primary {
+    background-color: hsl(var(--primary));
+    }
+    .text-primary-foreground {
+    color: hsl(var(--primary-foreground));
+    }
+    .px-4 {
+    padding-left: 1rem/* 16px */;
+    padding-right: 1rem/* 16px */;
+    }
+    .rounded {
+    border-radius: 0.25rem/* 4px */;
+    }
+    .grid {
+    display: grid;
+    }
+    .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .gap-4 {
+    gap: 1rem/* 16px */;
+    }
+    .mt-6 {
+    margin-top: 1.5rem/* 24px */;
+    }
+    .text-center {
+    text-align: center;
+    }
+    .bg-purple-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(147 51 234 / var(--tw-bg-opacity));
+    }
+    .rounded-lg {
+    border-radius: 0.5rem/* 8px */;
+    }
+    .text-xl {
+    font-size: 1.25rem/* 20px */;
+    line-height: 1.75rem/* 28px */;
+    }
+    .mb-4 {
+    margin-bottom: 1rem/* 16px */;
+    }
+    .min-w-full {
+    min-width: 100%;
+    }
+    .bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    }
+    .border {
+    border-width: 1px;
+    }
+    .border-zinc-200 {
+    --tw-border-opacity: 1;
+    border-color: rgb(228 228 231 / var(--tw-border-opacity));
+    }
+    .bg-zinc-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(244 244 245 / var(--tw-bg-opacity));
+    }
+    .border-b {
+    border-bottom-width: 1px;
+    }
+    .bg-red-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+    }
+    .bg-yellow-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(234 179 8 / var(--tw-bg-opacity));
+    }
+    .bg-green-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+    }
+    .w-32 {
+    width: 8rem/* 128px */;
+    }
+    .h-32 {
+    height: 8rem/* 128px */;
+    }
+    .bg-zinc-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(228 228 231 / var(--tw-bg-opacity));
+    }
+    .rounded-full {
+    border-radius: 9999px;
+    }
 </style>
