@@ -1,14 +1,13 @@
 <template>
     <main class="flex-1 p-6 m-custom-1">
-      <ProductList />
+      <ActiveProduct />
     </main>
 </template>
 
 <script>
-import ProductList from './main-content-builder/ProductList.vue';
-
+import ActiveProduct from '../../admin-builder/main-content-builder/ActiveProduct.vue';
 
 export default{
-  components: {ProductList}
+  components: {ActiveProduct}
 }
 </script>
