@@ -10,8 +10,7 @@
 <script>
 export default {
     name: 'Test',
-    // props: những dữ liệu từ component 
-    // cha truyền vào componet con
+    // props: những dữ liệu từ component cha truyền vào componet con
     // comp cha: Admin
     // comp con: Test
     props: ['data_test','checker', 'title'],

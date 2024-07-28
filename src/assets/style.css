@@ -10,8 +10,14 @@
 .justify-between {
     justify-content: space-between;
 }
+.justify-end{
+    justify-content: flex-end;
+}
 .items-center {
     align-items: center;
+}
+.f-g-custom-1{
+    gap: 1rem;
 }
 .h-screen{
     height: 100vh;

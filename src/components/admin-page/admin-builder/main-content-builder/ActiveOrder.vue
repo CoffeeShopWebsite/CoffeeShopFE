@@ -11,34 +11,19 @@
         </thead>
         <tbody>
           <tr>
-            <td class="py-2 px-4 border-b">John Smith</td>
-            <td class="py-2 px-4 border-b">Bánh kem</td>
+            <td class="py-2 px-4 border-b">sample</td>
+            <td class="py-2 px-4 border-b">sample</td>
             <td class="py-2 px-4 border-b"><span class="bg-green-500 text-white px-2 rounded">Completed</span></td>
           </tr>
           <tr>
-            <td class="py-2 px-4 border-b">David Nguyen</td>
-            <td class="py-2 px-4 border-b">Bánh mì</td>
+            <td class="py-2 px-4 border-b">sample</td>
+            <td class="py-2 px-4 border-b">sample</td>
+            <td class="py-2 px-4 border-b"><span class="bg-red-500 text-white px-2 rounded">Incomplete</span></td>
+          </tr>
+          <tr>
+            <td class="py-2 px-4 border-b">sample</td>
+            <td class="py-2 px-4 border-b">sample</td>
             <td class="py-2 px-4 border-b"><span class="bg-yellow-500 text-white px-2 rounded">Pending</span></td>
-          </tr>
-          <tr>
-            <td class="py-2 px-4 border-b">Nikolave Trang</td>
-            <td class="py-2 px-4 border-b">Cà phê</td>
-            <td class="py-2 px-4 border-b"><span class="bg-red-500 text-white px-2 rounded">Incomplete</span></td>
-          </tr>
-          <tr>
-            <td class="py-2 px-4 border-b">Nguyễn Thị Trang</td>
-            <td class="py-2 px-4 border-b">Bánh kem dâu</td>
-            <td class="py-2 px-4 border-b"><span class="bg-red-500 text-white px-2 rounded">Incomplete</span></td>
-          </tr>
-          <tr>
-            <td class="py-2 px-4 border-b">Nikolas Huyền</td>
-            <td class="py-2 px-4 border-b">Cà phê</td>
-            <td class="py-2 px-4 border-b"><span class="bg-green-500 text-white px-2 rounded">Incomplete</span></td>
-          </tr>
-          <tr>
-            <td class="py-2 px-4 border-b">Đỗ Văn Khải</td>
-            <td class="py-2 px-4 border-b">Bánh kem</td>
-            <td class="py-2 px-4 border-b"><span class="bg-red-500 text-white px-2 rounded">Incomplete</span></td>
           </tr>
         </tbody>
       </table>

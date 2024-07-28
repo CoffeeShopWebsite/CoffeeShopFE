@@ -9,11 +9,10 @@ import Authentication from '@/components/authentication/Authentication'
   import SignIn from '@/components/authentication/authentication-content/SignIn'
 
 // admin
-import Admin from '@/components/admin-page/Admin'
-//
-  import Account from '@/components/admin-page/admin-content/Account'
-  import Product from '@/components/admin-page/admin-content/Product'
-  import Order from '@/components/admin-page/admin-content/Order'
+import Admin from '@/components/admin-page/admin-content/Admin'
+import Account from '@/components/admin-page/admin-content/Account'
+import Product from '@/components/admin-page/admin-content/Product'
+import Order from '@/components/admin-page/admin-content/Order'
 
 
 
