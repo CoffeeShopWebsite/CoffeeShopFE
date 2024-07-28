@@ -1,7 +1,7 @@
 <template>
     <main class="flex-1 p-6 m-custom-1">
       <div class="grid grid-cols-3 gap-4 mb-6">
-        <MultiCard title="Prouct" count="10 Products" />
+        <MultiCard title="Product" count="10 Products" />
         <MultiCard title="Order" count="6 Orders" />
         <MultiCard title="User" count="4 Accounts" />
       </div>
