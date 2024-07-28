@@ -4,15 +4,15 @@
       <nav class="mt-4">
         <ul>
           <li><a href="/Admin" class="block py-2 hover:bg-zinc-700">Dashboard</a></li>
-          <li><a href="/Admin/Product" class="block py-2 hover:bg-zinc-700">Products</a></li>
-          <li><a href="/Admin/Order" class="block py-2 hover:bg-zinc-700">Orders</a></li>
-          <li><a href="/Admin/Account" class="block py-2 hover:bg-zinc-700">Accounts</a></li>
+          <li><a href="/Product" class="block py-2 hover:bg-zinc-700">Products</a></li>
+          <li><a href="/Order" class="block py-2 hover:bg-zinc-700">Orders</a></li>
+          <li><a href="/Account" class="block py-2 hover:bg-zinc-700">Accounts</a></li>
         </ul>
       </nav>
     </aside>
 </template>
 
-<style scoped>
+<style>
     ul{
         padding: 0;
     }

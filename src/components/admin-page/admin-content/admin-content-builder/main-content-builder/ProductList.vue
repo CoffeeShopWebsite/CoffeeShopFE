@@ -1,6 +1,6 @@
 <template>
     <section class="mb-6">
-      <h2 class="text-xl font-bold mb-4">Products</h2>
+        <h2 class="text-xl font-bold mb-4">Products</h2>
       <table class="min-w-full bg-white border border-zinc-200">
         <thead>
           <tr class="bg-zinc-100">

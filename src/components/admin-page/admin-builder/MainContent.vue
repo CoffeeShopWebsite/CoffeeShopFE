@@ -1,13 +1,9 @@
 <template>
-    <main class="flex-1 p-6">
-      <header class="flex justify-between items-center mb-6">
-        <h1 class="text-2xl font-bold">Statistics</h1>
-        <button class="bg-sign-out-color text-sign-out px-4 py-2 rounded">Sign Out</button>
-      </header>
+    <main class="flex-1 p-6 m-custom-1">
       <div class="grid grid-cols-3 gap-4 mb-6">
         <MultiCard title="Prouct" count="10 Products" />
-        <MultiCard title="Order" count="1 Orders" />
-        <MultiCard title="User" count="3 Accounts" />
+        <MultiCard title="Order" count="6 Orders" />
+        <MultiCard title="User" count="4 Accounts" />
       </div>
       <ActiveProduct />
       <ActiveOrder />
@@ -22,7 +18,6 @@ import MultiCard from './main-content-builder/MultiCard.vue';
 import TasksPerformance from './main-content-builder/TasksPerformance.vue';
 
 export default {
-    name: 'MainContent',
     components: { MultiCard, ActiveProduct, ActiveOrder, TasksPerformance }
 }
 </script>
